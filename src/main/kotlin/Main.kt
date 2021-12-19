@@ -7,12 +7,17 @@ import java.lang.NullPointerException
 
 // Exception Handling
 fun main(args: Array<String>) {
-    try {
-        LoginSchema()
-        setterDiscount(listOfItem)
-        MainMenu()
-    } catch (e : NullPointerException) {
-        println("Error!!!")
+    var isFinished = false
+    while (!isFinished) {
+        try {
+            LoginSchema()
+            setterDiscount(listOfItem)
+            MainMenu()
+            isFinished = true
+        } catch (e : NumberFormatException) {
+            println("Error!!!")
+        }
     }
+
 
 }

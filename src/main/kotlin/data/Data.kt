@@ -21,6 +21,7 @@ val listOfItemUser = mutableListOf<Product>()
 val listOfItem = mutableListOf<Product>(
     Electronics("Iphone 12", 1200),
     Electronics("Iphone 13", 1300),
+    Electronics("Iphone 14", 1400),
     Fashion("H&M Shirt", 13),
     Fashion("Air Jordan", 20),
 )
