@@ -1,8 +1,8 @@
 package login
 import data.listOfUser
 
-fun LoginSchema(){
-    var isLogin = true;
+fun loginSchema(){
+    var isLogin = true
     println("Hallo, Welcome To Our Shop")
     println("===LOGIN===")
     while(isLogin) {
@@ -11,8 +11,8 @@ fun LoginSchema(){
         print("Password : ")
         val password : String? = readLine()
         for(user in listOfUser) {
-            if (user.username.equals(username) && user.password.equals(password)) {
-                isLogin = false;
+            if (user.username == username && user.password == password) {
+                isLogin = false
             }
         }
         if (isLogin) {

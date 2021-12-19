@@ -1,6 +1,6 @@
 package menu
-import data.*
-fun MainMenu() {
+
+fun mainMenu() {
 
     var isFinished = false
     // looping
@@ -14,14 +14,13 @@ fun MainMenu() {
     """.trimIndent())
        print("Please Enter Menu Options: ")
        // Konversi tipe data
-       var choiceMainMenu : String? = readLine()
-       val convertedChoice = choiceMainMenu?.toInt()
+       val choiceMainMenu : String? = readLine()
 
-       when(convertedChoice) {
-           1 ->ProductListPreview()
-           2 -> CartListPreview()
+       when(choiceMainMenu?.toInt()) {
+           1 -> productListPreview()
+           2 -> cartListPreview()
            3 -> {
-               Checkout()
+               checkout()
            }
            else -> {
                println("Goodbye")

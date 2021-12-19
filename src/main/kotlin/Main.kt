@@ -5,13 +5,13 @@ import login.*
 import menu.*
 
 // Exception Handling
-fun main(args: Array<String>) {
+fun main() {
     setterDiscount(listOfItem)
     var isFinished = false
     while (!isFinished) {
         try {
-            LoginSchema()
-            MainMenu()
+            loginSchema()
+            mainMenu()
             isFinished = true
         } catch (e : NumberFormatException) {
             println("Error!!!")

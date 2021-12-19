@@ -20,7 +20,7 @@ val listOfUser = mutableListOf<UserInterface>(
 
 val listOfItemUser = mutableListOf<Product>()
 
-val listOfItem = mutableListOf<Product>(
+val listOfItem = mutableListOf(
     Electronics("Iphone 12", 1200),
     Electronics("Iphone 13", 1300),
     Electronics("Iphone 14", 1400),

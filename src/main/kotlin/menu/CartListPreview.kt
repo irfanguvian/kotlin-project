@@ -2,24 +2,24 @@ package menu
 
 import data.*
 
-fun CartListPreview() {
+fun cartListPreview() {
     var isLoop = true
     while(isLoop) {
     if (listOfItemUser.size > 0) {
            println("===================================================")
            println("===CART===")
            for((index, data) in listOfItemUser.withIndex()  ) {
-               println("${index + 1}.  ${data?.name}  --->  ${data?.price}")
+               println("${index + 1}.  ${data.name}  --->  ${data.price}")
            }
            println("""
         1. Delete Item
         2. Back To Menu
     """.trimIndent())
            print("Select Menu: ")
-           var isDeleteItem : Int? = readLine()!!.toInt()
+           val isDeleteItem : Int? = readLine()!!.toInt()
            if(isDeleteItem == 1) {
                print("Please Select Item You wanna Delete: ")
-               var itemChoice : Int? = readLine()!!.toInt()
+               val itemChoice : Int? = readLine()!!.toInt()
                listOfItemUser.removeAt(itemChoice!!.minus(1))
            } else {
                isLoop = false

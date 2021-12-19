@@ -1,7 +1,5 @@
 package product
 
-import product.Product
-
 // class , constructor, Inheritances
 class Electronics (elecName : String, elecPrice: Int) : Product() {
    init {
