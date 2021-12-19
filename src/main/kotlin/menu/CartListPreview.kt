@@ -16,11 +16,11 @@ fun cartListPreview() {
         2. Back To Menu
     """.trimIndent())
            print("Select Menu: ")
-           val isDeleteItem : Int? = readLine()!!.toInt()
+           val isDeleteItem : Int = readLine()!!.toInt()
            if(isDeleteItem == 1) {
                print("Please Select Item You wanna Delete: ")
-               val itemChoice : Int? = readLine()!!.toInt()
-               listOfItemUser.removeAt(itemChoice!!.minus(1))
+               val itemChoice : Int = readLine()!!.toInt()
+               listOfItemUser.removeAt(itemChoice.minus(1))
            } else {
                isLoop = false
            }
