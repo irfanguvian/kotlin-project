@@ -7,16 +7,19 @@ import java.lang.NullPointerException
 
 // Exception Handling
 fun main(args: Array<String>) {
+    setterDiscount(listOfItem)
     var isFinished = false
     while (!isFinished) {
         try {
             LoginSchema()
-            setterDiscount(listOfItem)
             MainMenu()
             isFinished = true
         } catch (e : NumberFormatException) {
             println("Error!!!")
         }
+         catch (e : IndexOutOfBoundsException) {
+             println("Error!!!")
+         }
     }
 
 
