@@ -1,6 +1,8 @@
 package data
 
-import menu.*
+import product.Electronics
+import product.Fashion
+import product.Product
 
 // interface
 
