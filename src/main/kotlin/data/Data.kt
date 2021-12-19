@@ -2,11 +2,17 @@ package data
 
 import menu.*
 
-data class User(val username: String, val password: String)
+// interface
 
-data class Cart(val id: Int)
+interface UserInterface {
+   val username : String
+   val password : String
+}
 
-val listOfUser = mutableListOf<User>(
+// data class
+data class User(override val username: String, override val password: String) : UserInterface
+// collection
+val listOfUser = mutableListOf<UserInterface>(
     User("irfan","123")
 )
 

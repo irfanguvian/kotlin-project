@@ -1,7 +1,9 @@
 package menu
 
 import data.*
-fun Checkout (): Boolean {
+
+// safe calls and elvis operator
+fun Checkout ()  {
     var priceAll : Int = 0
     if (listOfItemUser.size > 0) {
         println("===================================================")
@@ -15,14 +17,17 @@ fun Checkout (): Boolean {
         val money = readLine()
         val moneyConvert = money!!.toInt()
         val change = moneyConvert - priceAll;
-        println("Your Change : ${change}")
-        println("Thank You!!!")
-        println("===================================================\n\n")
-        return true
+        if (change < 0) {
+            println("the money you input is not enough, redirected to menu!")
+        } else {
+            println("Your Change : ${change}")
+            println("Thank You!!!")
+            println("===================================================\n")
+            listOfItemUser.clear()
+        }
     } else {
         println("===================================================\n")
         println("There is No Item In Please Add Some Item!!\n")
         println("===================================================")
-        return false
     }
 }

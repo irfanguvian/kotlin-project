@@ -15,7 +15,6 @@ fun ProductListPreview() {
     var isChoice = true
     if (convertedChoice == 1) {
         println("===ITEM LIST===")
-        setterDiscount(listOfItem)
         for((index, data) in listOfItem.withIndex() ) {
             if(data.discount !== null) {
                 println("${index + 1}.     ${data.name}  --->  ${data.price}, discount ${data!!.discount!!.times(100).toInt()}%")
